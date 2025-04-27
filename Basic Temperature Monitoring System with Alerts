@@ -1,0 +1,43 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+mkdir temperature-monitor
+cd temperature-monitor
+touch app.py requriements.txt
+vim app.py     <!--->
+vim requirements.txt     <!---->
+vim Dockerfile          <!---->
+sudo docker build -t temperature-monitor .
+sudo docker run -d -p 5000:5000 temperature-monitor
+sudo apt install curl
+curl -X POST -d "temperature=32&humidity=65" http://44.208.165.148:5000/upload-data
+sudo apt update
+sudo apt install fontconfig openjdk-21-jre -y
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian/jenkins.io-2023.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+visit jenkins
+vim /var/lib/jenkins/secrets/initialAdminPassword
+vim .gitignore              <!------>
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PranavKamlaskar/tempmonitor.git
+git push -u origin main
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+sudo systemctl start docker
+sudo docker rm -f containerid 
+sudo lsof -i :5000
+vim docker-compose.yml        <!---->
+vim prometheus.yml            <!------>
+sudo apt install docker-compose -y
+sudo docker-compose up --build
+sudo docker-compose down just in case  
