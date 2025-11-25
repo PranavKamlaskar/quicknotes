@@ -1,0 +1,14 @@
+
+cd mlflow
+mkdir mlruns
+touch mlflow.db
+cd ..
+
+
+mlflow server \
+  --backend-store-uri sqlite:///mlflow/mlflow.db \
+  --default-artifact-root ./mlflow/mlruns \
+  --host 0.0.0.0 --port 5000
+
+Open in browser:
+👉 http://localhost:5000
