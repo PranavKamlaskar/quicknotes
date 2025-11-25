@@ -1,0 +1,71 @@
+commmit and push to git 
+
+
+in root dir 
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PranavKamlaskar/test.git
+git push -u origin main
+
+
+
+if some problem occurs 
+Revoke the leaked token (security)
+
+Remove secrets from files & ignore them (future safety)
+
+Rewrite git history to remove the secret (so GitHub stops blocking)
+
+Force-push the cleaned history
+
+
+
+
+
+
+1Revoke the leaked token (security)
+2️⃣ Remove secrets from your working tree & ignore those files- delete the files or the line 
+3️⃣ Rewrite Git history to remove the secret (the crucial part)
+From your repo root:
+pip install git-filter-repo
+git filter-repo --path .env --path scripts/.gha_log_fetch.swp --invert-paths
+
+Rewrites your repo history
+
+Completely removes .env and scripts/.gha_log_fetch.swp from every commit
+
+git status   # to see what changed
+git add .gitignore
+git commit -m "Remove secrets and ignore .env & swap files"
+
+
+if 
+
+our error tells us your repo no longer has a remote named origin.
+
+This usually happens after:
+
+rewriting history (like using git filter-repo), or
+
+cloning without adding the remote, or
+
+accidentally removing the remote.
+
+Let's fix it cleanly.
+
+
+
+git remote -v
+You will likely see no output or something incorrect.
+
+Re-add the GitHub remote
+git remote add origin https://github.com/PranavKamlaskar/optimizer-mlops.git
+
+
+git remote -v
+
+git push -u origin main --force
+
