@@ -41,3 +41,4 @@ vim prometheus.yml            <!------>
 sudo apt install docker-compose -y
 sudo docker-compose up --build
 sudo docker-compose down just in case  
+Set Up Prometheus
