@@ -1,5 +1,5 @@
-Create api/app.py:
-
+## Create api/app.py:
+```
 from fastapi import FastAPI
 from prometheus_client import Counter, Histogram, generate_latest
 from fastapi.responses import Response
@@ -16,7 +16,7 @@ def health():
 @app.get("/metrics")
 def metrics():
     return Response(generate_latest(), media_type="text/plain")
-
+```
 
 
 uvicorn api.app:app --host 0.0.0.0 --port 8000
