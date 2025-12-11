@@ -49,3 +49,30 @@ https://github.com/PranavKamlaskar/quicknotes/blob/main/ssetup%20jenkins
 
 ## setup github actions 
 https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20GitHub%20Actions.md
+
+
+
+## Log Ingestion & Dataset Construction
+
+Goal:
+Collect build logs → parse + clean → extract metadata → build dataset → store in S3/local → ready for model training.
+
+```
+ai-cicd-optimizer/
+└── data/
+    ├── raw/               # raw logs
+    ├── parsed/            # cleaned logs + metadata
+    ├── datasets/          # final training sets
+└── scripts/
+    ├── jenkins_log_fetch.py
+    ├── gha_log_fetch.py
+    ├── log_parser.py
+    ├── build_metadata_schema.json
+    ├── dataset_builder.py
+```
+## Define Build Metadata Schema
+Create file: scripts/build_metadata_schema.json
+https://github.com/PranavKamlaskar/quicknotes/blob/main/Define%20Build%20Metadata%20Schema
+
+
+## Jenskins log collector script 
