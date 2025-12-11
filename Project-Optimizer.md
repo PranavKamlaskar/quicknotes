@@ -48,4 +48,4 @@ https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20Grafana
 https://github.com/PranavKamlaskar/quicknotes/blob/main/ssetup%20jenkins
 
 ## setup github actions 
-https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20GitHub%20Actions
+https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20GitHub%20Actions.md
