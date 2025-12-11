@@ -1,0 +1,20 @@
+Create file: scripts/build_metadata_schema.json
+
+```
+{
+  "build_id": "",
+  "timestamp": "",
+  "ci_system": "",
+  "repo": "",
+  "branch": "",
+  "commit": "",
+  "status": "",
+  "duration_seconds": 0,
+  "changed_files": [],
+  "runner_type": "",
+  "exit_code": 0,
+  "raw_log_path": "",
+  "stages": {}
+}
+
+```
