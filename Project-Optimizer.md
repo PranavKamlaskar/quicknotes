@@ -32,7 +32,8 @@ MLflow will be available at:
 http://localhost:5000
 
 ## Setup FastAPI Inference Service
-https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20FastAPI%20Inference%20Server
+https://github.com/PranavKamlaskar/quicknotes/blob/main/Set%20Up%20FastAPI%20Inference%20Server.md
+
 ``` curl http://localhost:8000/health```
 
 ## Setup Prometheus
